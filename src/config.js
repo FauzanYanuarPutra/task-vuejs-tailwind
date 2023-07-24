@@ -4,9 +4,7 @@ export default axios.create({
   timeout: 15000,
   headers: {
     Accept: 'application/json',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Authorization, Content-Type'
-    // Authorization: 'Bearer ' + token
+    'Content-Type': 'application/json'
+    // Authorization: "Bearer "+ token,
   }
 })
