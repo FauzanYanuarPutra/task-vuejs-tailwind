@@ -1,6 +1,6 @@
 import axios from 'axios'
 export default axios.create({
-  baseURL: 'http://54.80.111.38:8005',
+  baseURL: import.meta.env.VITE_APP_BACKEND_URL,
   timeout: 15000,
   headers: {
     Accept: 'application/json',
