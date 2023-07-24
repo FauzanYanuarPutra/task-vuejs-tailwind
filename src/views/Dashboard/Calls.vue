@@ -285,7 +285,7 @@ const currentPage = ref(1)
 const ellipsis = '...'
 
 const displayedPages = computed(() => {
-  console.log(Filtered.value)
+  // console.log(Filtered.value)
   const total = Math.ceil(Filtered.value / perPage)
   const current = currentPage.value
   let pages = []
