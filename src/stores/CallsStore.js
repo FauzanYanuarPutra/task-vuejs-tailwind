@@ -10,9 +10,11 @@ const { token, flashMessage } = storeToRefs(authenticationStore)
 
 export const useCallsStore = defineStore('calls', () => {
   const calls = ref({})
+  const total = ref(null)
+
   const loading = ref(false)
 
-  function get_calls(page = 1, limit = 20) {
+  function get_calls(page, limit) {
     loading.value = true
     axiosInstance
       .get('/api/call?page=' + page + '&limit=' + limit, {
@@ -22,6 +24,7 @@ export const useCallsStore = defineStore('calls', () => {
       })
       .then((res) => {
         calls.value = res.data
+        total.value = calls.value.total
       })
       .catch((error) => {
         console.log(error)
@@ -42,5 +45,10 @@ export const useCallsStore = defineStore('calls', () => {
       })
   }
 
-  return { calls, loading, get_calls }
+  // Create a computed property to convert total to a number
+  const totalPages = computed(() => {
+    return Number(total.value)
+  })
+
+  return { calls, total, loading, get_calls, totalPages }
 })

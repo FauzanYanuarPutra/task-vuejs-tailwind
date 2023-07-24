@@ -275,11 +275,11 @@
                   <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
                     <a
                       :href="item.href"
-                      @click="authenticationStore.logout"
                       :class="[
                         active ? 'bg-gray-50' : '',
                         'block px-3 py-1 text-sm leading-6 text-gray-900'
                       ]"
+                      @click="authenticationStore.logout"
                       >{{ item.name }}</a
                     >
                   </MenuItem>
