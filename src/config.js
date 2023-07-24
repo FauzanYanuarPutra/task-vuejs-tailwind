@@ -6,7 +6,7 @@ export default axios.create({
     Accept: 'application/json',
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Authorization, Content-Type',
-    Authorization: 'Bearer ' + token
+    'Access-Control-Allow-Headers': 'Authorization, Content-Type'
+    // Authorization: 'Bearer ' + token
   }
 })
