@@ -7,6 +7,8 @@ const router = createRouter({
   scrollBehavior: function (to, from, savedPosition) {
     return savedPosition || { x: 0, y: 0 }
   },
+  linkActiveClass: 'active', // Add your active link CSS class here
+  linkExactActiveClass: 'exact-active',
   routes: [
     {
       path: '/',

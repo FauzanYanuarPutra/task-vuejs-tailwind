@@ -352,3 +352,9 @@ const userNavigation = [
 
 const sidebarOpen = ref(false)
 </script>
+
+<style>
+.exact-active {
+  background-color: rgb(244, 244, 244);
+}
+</style>

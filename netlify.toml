@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"  # Specify the build command for your Vue.js app
+  publish = "dist"  # Specify the build output directory
+
+[build.environment]
+  # Optionally set environment variables that your app needs
+  # For example, if your Vue app requires VITE_APP_BACKEND_URL, set it here
+  VITE_APP_BACKEND_URL = "http://54.80.111.38:8005"
+
+[[redirects]]
+  # Redirect all requests to your index.html for client-side routing to work
+  from = "/*"
+  to = "/index.html"
+  status = 200
